@@ -9,7 +9,7 @@ class Autor(models.Model):
 	sexo = models.CharField(max_length=2) 
 
 def __unicode__(self):
-   	return self.nombre
+   return self.nombre	
 
 class Articulo(models.Model):
   autor = models.ForeignKey(Autor)
