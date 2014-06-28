@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+RUTA_PROYECTO = os.path.dirname(os.path.realpath(__file__))
+
+#encoding:utf-8
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -23,6 +26,10 @@ SECRET_KEY = 'tne2%7y!sf*n6yzymjscy8!8k#t&o1o#k2)+9irvsu==jq6d4='
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+
+TEMPLATE_DIRS=(
+        os.path.join(RUTA_PROYECTO, 'plantillas'),
+     )
 
 ALLOWED_HOSTS = []
 
@@ -36,6 +43,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admindocs',
+    'tastypie',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -51,6 +60,10 @@ ROOT_URLCONF = 'sicla.urls'
 
 WSGI_APPLICATION = 'sicla.wsgi.application'
 
+MEDIA_ROOT = os.path.join(RUTA_PROYECTO, 'carga')
+
+MEDIA_URL = '/media/'
+
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
@@ -58,14 +71,18 @@ WSGI_APPLICATION = 'sicla.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'sicla.db',
+        'USER':  '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-PE'
 
 TIME_ZONE = 'UTC'
 
