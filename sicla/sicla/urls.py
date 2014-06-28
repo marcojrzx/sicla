@@ -6,8 +6,7 @@ from logica.api.resources import AutorResource
 
 admin.autodiscover()
 
-v1_api = Api(api_name='v1')
-v1_api.register(AutorResource())
+autor_resource = AutorResource()
 
 urlpatterns = patterns('',
     # Examples:
@@ -15,6 +14,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    (r'^api/', include(v1_api.urls)),
+    url(r'^api/', include(autor_resource.urls)),
 
 )

@@ -25,6 +25,8 @@ SECRET_KEY = 'tne2%7y!sf*n6yzymjscy8!8k#t&o1o#k2)+9irvsu==jq6d4='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
+
 TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS=(
