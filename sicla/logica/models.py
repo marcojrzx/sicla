@@ -9,8 +9,9 @@ class Autor(models.Model):
    return self.nombre	
 
 class Articulo(models.Model):
-  autor = models.ForeignKey(Autor)
-  articulo = models.TextField(max_length=10000)
+ autor = models.ForeignKey(Autor)
+ titulo = models.TextField(max_length=100)
+ articulo = models.TextField(max_length=10000)
 
-def __unicode__(self):
-   return self.articulo
+ def __unicode__(self):
+  return self.titulo
