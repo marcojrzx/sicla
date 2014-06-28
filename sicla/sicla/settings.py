@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
     'tastypie',
+    'logica',
 )
 
 MIDDLEWARE_CLASSES = (
