@@ -73,7 +73,7 @@ MEDIA_URL = '/media/'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'acento',
         'USER':  'marco',
         'PASSWORD': '201598765',
