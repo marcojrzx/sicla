@@ -73,11 +73,11 @@ MEDIA_URL = '/media/'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'sicla.db',
-        'USER':  '',
-        'PASSWORD': '',
-        'HOST': '',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'acento',
+        'USER':  'marco',
+        'PASSWORD': '201598765',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }

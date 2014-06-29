@@ -4,6 +4,7 @@ from logica.models import Autor, Articulo
 class AutorResource(ModelResource):
  class Meta:
   queryset = Autor.objects.all()  
+  allowed_methods = ['get']	
   resource_name = 'autor'
                                                                                                                                       
 
